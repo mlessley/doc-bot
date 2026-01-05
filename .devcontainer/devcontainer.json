@@ -1,0 +1,30 @@
+{
+    "name": "Doc-Bot DevX (uv)",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "..",
+        // tell Docker to stop at the development stage
+        "target": "development"
+    },
+    "remoteUser": "devx",
+    "containerUser": "devx",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                // "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+                // "python.terminal.activateEnvInSelectedTerminal": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "astral-sh.ruff"
+            ]
+        }
+    },
+    "forwardPorts": [
+        7860
+    ],
+    "updateRemoteUserUID": true,
+    "postCreateCommand": "uv sync"
+}

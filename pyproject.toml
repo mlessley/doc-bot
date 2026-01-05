@@ -1,0 +1,14 @@
+[project]
+name = "doc-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=1.4.0",
+    "gradio>=6.2.0",
+    "langchain-ibm>=1.0.2",
+    "langchain-ollama>=1.0.1",
+    "pypdf>=6.5.0",
+    "python-dotenv>=1.2.1",
+]
